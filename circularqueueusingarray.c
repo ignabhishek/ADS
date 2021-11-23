@@ -38,11 +38,11 @@ void enqueue()
 		}
     		rear = (rear + 1) % SIZE;
     		items[rear] = num;
-    		printf("\n Inserted -> %d", num);
+    		printf("\n Inserted -> %d \n", num);
   	}
 }
 
-int dequeue() 
+void dequeue() 
 {
 	int num;
   	if (isempty()) 
@@ -78,9 +78,9 @@ void display()
     		printf("\n Items -> ");
     		for (i = front; i != rear; i = (i + 1) % SIZE) 
 		{
-     	 		printf(" %d ", items[i]);
+     	 		printf("%d\t", items[i]);
    		}
-    		printf("%d ", items[i]);
+		printf("%d", items[i]);
     		printf("\n Rear -> %d \n", rear);
   	}
 }
